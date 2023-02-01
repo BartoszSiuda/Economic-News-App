@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">Reddit Android App</string>
+
+    <string name="loading">Loading…</string>
+    <string name="network_problem_check_internet_connection">Network problem. Check Internet connection please.</string>
+    <string name="try_again">Try again</string>
+    <string name="refresh">Refresh</string>
+    <string name="close">Close</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="connection_error_title">Connection error</string>
+    <string name="connection_error_message">Unable to fetch Reddit posts.\nCheck your internet connection and try again.</string>
+    <string name="retry_label">Retry</string>
+
+    <string name="error">Error</string>
+    <string name="error_api_call_failure">Error: API Call failure.</string>
+    <string name="toast_message">Articles updated successfully</string>
+
+</resources>
