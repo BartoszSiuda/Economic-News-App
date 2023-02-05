@@ -6,10 +6,7 @@ import com.google.gson.annotations.SerializedName
 data class PostGsonModel(
 
     @SerializedName("name")
-    val id: String,
-
-    @SerializedName("permalink")
-    val permalink: String?,
+    val id: String?,
 
     @SerializedName("title")
     val title: String?,
@@ -20,7 +17,7 @@ data class PostGsonModel(
     @SerializedName("author")
     val author: String?,
 
-    @SerializedName("selftext")
-    val text: String?
+    @SerializedName("created")
+    val created: Double?,
 
 )

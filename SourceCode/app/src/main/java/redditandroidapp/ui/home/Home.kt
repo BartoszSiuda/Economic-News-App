@@ -167,10 +167,7 @@ private fun PostsListItem(post: RedditPostModel) {
                         text = it, style = MaterialTheme.typography.subtitle1
                     )
                 }
-                Spacer(Modifier.height(16.dp))
-                post.text?.let {
-                    Text(text = it, maxLines = 2, overflow = TextOverflow.Ellipsis,  style = MaterialTheme.typography.subtitle1)
-                }
+
                 Spacer(Modifier.height(16.dp))
                 post.author?.let {
                     Text(

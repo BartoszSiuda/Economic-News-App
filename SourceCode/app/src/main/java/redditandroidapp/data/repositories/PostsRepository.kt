@@ -110,11 +110,10 @@ class PostsRepository @Inject constructor(private val apiClient: ApiClient) {
             apiPostModel.post?.let {
                 RedditPostModel(
                     it.id,
-                    it.permalink,
                     it.title,
                     it.thumbnail,
                     it.author,
-                    it.text
+                    it.created,
                 )
             }
         }
