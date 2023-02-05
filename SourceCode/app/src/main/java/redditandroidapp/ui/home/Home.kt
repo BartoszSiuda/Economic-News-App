@@ -146,7 +146,7 @@ private fun PostsListItem(post: RedditPostModel) {
         colors = CardDefaults.cardColors(containerColor = Color.White),
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
         modifier = Modifier
-            .padding(vertical = 8.dp, horizontal = 8.dp)
+            .padding(vertical = 8.dp, horizontal = 0.dp)
             .fillMaxWidth()
     ) {
         post.let { it ->
@@ -167,7 +167,12 @@ private fun PostsListItem(post: RedditPostModel) {
                         text = it, style = MaterialTheme.typography.subtitle1
                     )
                 }
-
+                Spacer(Modifier.height(16.dp))
+                post.created?.let {
+                    text(
+                        text = it, style = MaterialTheme.typography.subtitle2
+                    )
+                }
                 Spacer(Modifier.height(16.dp))
                 post.author?.let {
                     Text(
