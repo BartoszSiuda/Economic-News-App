@@ -7,6 +7,7 @@
     <string name="try_again">Try again</string>
     <string name="refresh">Refresh</string>
     <string name="close">Close</string>
+    <string name="added">Added</string>
     <string name="title_activity_main">MainActivity</string>
 
     <string name="connection_error_title">Connection error</string>

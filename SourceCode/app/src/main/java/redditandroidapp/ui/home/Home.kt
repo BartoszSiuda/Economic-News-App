@@ -169,8 +169,9 @@ private fun PostsListItem(post: RedditPostModel) {
                 }
                 Spacer(Modifier.height(16.dp))
                 post.created?.let {
-                    text(
-                        text = it, style = MaterialTheme.typography.subtitle2
+                    val textToBeDisplayed = stringResource(R.string.added) + ": " + it.toString()
+                    Text(
+                        text = textToBeDisplayed, style = MaterialTheme.typography.subtitle2
                     )
                 }
                 Spacer(Modifier.height(16.dp))
