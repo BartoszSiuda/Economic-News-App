@@ -83,11 +83,12 @@ private fun HomeContent(
 @Composable
 private fun AppBar(onRefreshPressed: () -> Unit) {
     TopAppBar(elevation = 4.dp,
-        title = { Text(stringResource(R.string.app_name)) },
+        title = { },
         backgroundColor = MaterialTheme.colors.primarySurface,
         actions = {
             IconButton(onClick = onRefreshPressed) {
                 Icon(Icons.Filled.Refresh, null)
+
             }
         })
 }
@@ -169,15 +170,16 @@ private fun PostsListItem(post: RedditPostModel) {
                 }
                 Spacer(Modifier.height(16.dp))
                 post.created?.let {
-                    val textToBeDisplayed = stringResource(R.string.added) + ": " + it.toString()
+                    val textToBeDisplayed1 = stringResource(R.string.added) + ": " + it.toString()
                     Text(
-                        text = textToBeDisplayed, style = MaterialTheme.typography.subtitle2
+                        text = textToBeDisplayed1, style = MaterialTheme.typography.subtitle2
                     )
                 }
                 Spacer(Modifier.height(16.dp))
                 post.author?.let {
+                    val textToBeDisplayed2 = stringResource(R.string.author) + ": " + it
                     Text(
-                        text = it, style = MaterialTheme.typography.subtitle2
+                        text = textToBeDisplayed2, style = MaterialTheme.typography.subtitle2
                     )
                 }
                 Spacer(Modifier.height(16.dp))
