@@ -1,5 +1,7 @@
 package redditandroidapp.ui.home
 
+import android.R
+import android.R.id
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -7,8 +9,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.runtime.Composable
@@ -18,13 +18,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberAsyncImagePainter
 import redditandroidapp.R
 import redditandroidapp.data.models.RedditPostModel
-import androidx.compose.ui.text.style.TextOverflow
+
 
 @Composable
 fun Home(
@@ -87,10 +88,13 @@ private fun AppBar(onRefreshPressed: () -> Unit) {
         backgroundColor = MaterialTheme.colors.primarySurface,
         actions = {
             IconButton(onClick = onRefreshPressed) {
-                Icon(Icons.Filled.Refresh, null)
+                Icon(painter = painterResource(id = android.R.ic_launcher_foreground)
+                    contentDescription = "Refresh")
+                }
+
 
             }
-        })
+        }
 }
 
 @Composable
